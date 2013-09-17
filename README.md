@@ -1,5 +1,7 @@
 # syslog-stream
 
+[![Build Status](https://secure.travis-ci.org/bloodhound/syslog-stream.png)](http://travis-ci.org/bloodhound/syslog-stream)
+
 Create a writable stream for syslog using C bindings.
 
 ## Installation
