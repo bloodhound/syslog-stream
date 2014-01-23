@@ -105,7 +105,7 @@ Syslog.prototype.severities = {
   'emergency': 0,
   'emerg':     0,
   'alert':     1,
-  'critical':  1,
+  'critical':  2,
   'crit':      2,
   'error':     3,
   'err':       3,
