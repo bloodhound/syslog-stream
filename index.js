@@ -70,7 +70,7 @@ Syslog.prototype._write = function(chunk, encoding, callback) {
 
 Syslog.prototype.log = function(severity, message) {
   syslog.write(this.severities[severity], message);
-  this.emit('log', message);
+  this.emit('log', message, this.severities[severity]);
 };
 
 /**

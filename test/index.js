@@ -46,4 +46,14 @@ describe('Syslog', function() {
       done();
     });
   });
+
+  it('should expose severity in the emitted event', function (done) {
+    var logger = new (require('..'));
+    logger.on('log', function(message, severity) {
+      should.exist(severity);
+      severity.should.equal(7);
+      done();
+    });
+    logger.log('debug', 'testing log event');
+  });
 });

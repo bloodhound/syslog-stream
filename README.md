@@ -28,6 +28,13 @@ syslog.write('Message to syslog', 'utf8', function() {
 syslog.info('find me in the logs');
 syslog.warn('Streams are too cool');
 syslog.error('Red alert');
+
+// Listen for log events
+syslog.on('log', function(message, severity) {
+  // Do something with message or severity
+  // severity is 3 because you called .error below
+});
+syslog.error('something bad happened');
 ```
 
 ## Test
