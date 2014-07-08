@@ -15,7 +15,7 @@ npm install syslog-stream
 ## Example
 
 ```javascript
-var syslog = require('syslog-stream');
+var syslog = require('syslog-stream')();
 
 // Use stream methods
 syslog.severity = 'debug';
