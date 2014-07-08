@@ -33,6 +33,10 @@ process.on('exit', function() {
  */
 
 function Syslog(identity, facility) {
+  if (!(this instanceof Syslog)) {
+    return new Syslog(identity, facility);
+  }
+
   this.identity = identity || 'node';
   this.facility = facility || 'user';
   this.severity = 'debug';
